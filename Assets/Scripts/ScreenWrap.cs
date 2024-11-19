@@ -6,8 +6,8 @@ public class ScreenWrap : MonoBehaviour
 {
     public float xMin;
     public float xMax;
-    public float zMin;
-    public float zMax;
+    public float yMin;
+    public float yMax;
 
     // Update is called once per frame
     void Update()
@@ -30,19 +30,19 @@ public class ScreenWrap : MonoBehaviour
                 );
         }
 
-        if (transform.position.x > zMax)
+        if (transform.position.x > yMax)
         {
             transform.position = new Vector3(
-                zMin,
+                yMin,
                 transform.position.y,
                 transform.position.z
                 );
         }
 
-        if (transform.position.x > zMin)
+        if (transform.position.x > yMin)
         {
             transform.position = new Vector3(
-                zMax,
+                yMax,
                 transform.position.y,
                 transform.position.z
                 );
