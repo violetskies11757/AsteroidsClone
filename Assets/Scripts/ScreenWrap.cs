@@ -21,7 +21,7 @@ public class ScreenWrap : MonoBehaviour
                 );
         }
 
-        if (transform.position.x > xMin)
+        if (transform.position.x < xMin)
         {
             transform.position = new Vector3(
                 xMax,
@@ -30,20 +30,20 @@ public class ScreenWrap : MonoBehaviour
                 );
         }
 
-        if (transform.position.x > yMax)
+        if (transform.position.y > yMax)
         {
             transform.position = new Vector3(
+                transform.position.x,
                 yMin,
-                transform.position.y,
                 transform.position.z
                 );
         }
 
-        if (transform.position.x > yMin)
+        if (transform.position.y < yMin)
         {
             transform.position = new Vector3(
+                transform.position.x,
                 yMax,
-                transform.position.y,
                 transform.position.z
                 );
         }
