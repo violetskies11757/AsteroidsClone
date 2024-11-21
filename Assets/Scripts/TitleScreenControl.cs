@@ -18,7 +18,7 @@ public class TitleScreenControl : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-
+            SceneManager.LoadScene("MainLevel");
         }
     }
 }
