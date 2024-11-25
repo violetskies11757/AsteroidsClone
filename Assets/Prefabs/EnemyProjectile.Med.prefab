@@ -147,5 +147,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointValue: 1
   gm: {fileID: 0}
+  rb: {fileID: 0}
   smallerEnemyProjectile: {fileID: 2755880996380146686, guid: f76002e2d7b6e3d40a3b07b03e0063bb, type: 3}
   smallerEnemyProjectilesToSpawn: 2
+  forceRange: 5
+  torqueRange: 20

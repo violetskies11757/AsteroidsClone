@@ -6,14 +6,23 @@ public class EnemyProjectileController : MonoBehaviour
 {
     public int pointValue;
     public GameManager gm;
+    public Rigidbody rb;
 
     //Splitting Variables
     public GameObject smallerEnemyProjectile;
     public int smallerEnemyProjectilesToSpawn;
 
+    //Random Force Variables
+    public float forceRange;
+    public float torqueRange;
+
     private void Start()
     {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        rb = GetComponent<Rigidbody>();
+
+        AddRandomForce();
+        AddRandomTorque();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -38,5 +47,20 @@ public class EnemyProjectileController : MonoBehaviour
             for(int i = 0; i < numberToSpawn; i++)
             Instantiate(smallerEnemyProjectile, transform.position, transform.rotation);
         }
+    }
+
+    public void AddRandomForce()
+    {
+        float randomForceX = Random.Range(-forceRange, forceRange);
+        float randomForceY = Random.Range(-forceRange, forceRange);
+        Vector3 randomForce = new Vector3(randomForceX, randomForceY, 0);
+
+        rb.AddForce(randomForce, ForceMode.Impulse);
+    }
+
+    public void AddRandomTorque()
+    {
+        float randomTorque = Random.Range(-torqueRange, torqueRange);
+        rb.AddTorque(Vector3.back * randomTorque, ForceMode.Impulse);
     }
 }
