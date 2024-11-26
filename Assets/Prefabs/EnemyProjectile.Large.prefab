@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f6ea3ac637680fd4da5297f1df4dd863, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -150,5 +150,5 @@ MonoBehaviour:
   rb: {fileID: 0}
   smallerEnemyProjectile: {fileID: 5806376532974293248, guid: 6927ef54bc6063b488e3295b9f191011, type: 3}
   smallerEnemyProjectilesToSpawn: 2
-  forceRange: 10
-  torqueRange: 10
+  forceRange: 6
+  torqueRange: 6
