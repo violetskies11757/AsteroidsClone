@@ -19,6 +19,12 @@ public class TitleScreenControl : MonoBehaviour
         if (Input.GetButtonDown("Start"))
         {
             SceneManager.LoadScene("MainLevel");
+            
+        }
+
+        if(Input.GetButtonDown("Exit"))
+        {
+            Application.Quit();
         }
     }
 }
